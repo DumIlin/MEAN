@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <link rel = 'stylesheet' href = 'tute.css'/>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    </head>
+
+<body>
+    <h1> List parcel by weight </h1></br>
+    <small>
+        <a type="button" class="btn btn-info" href= "/">Home</a>
+        <a type="button" class="btn btn-info" href= "/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-info" href= "/getparcels">List Parcels</a>
+        <a type="button" class="btn btn-info" href= "/deleteparcel">Delete Parcel</a>
+        <a type="button" class="btn btn-info" href= "/delWoAoF">Delete Parcel by Weight ot Address or Fragile</a>
+        <a type="button" class="btn btn-info" href= "/listS">List parcel by sender</a>
+        <a type="button" class="btn btn-info" href= "/listW">List parcel by weight</a>
+        <a type="button" class="btn btn-info" href= "/updateparcel">Update Parcel</a>
+    </small>
+    <br>
+    <h1></h1>
+    <form action="/dele" method="POST">
+        Choose Min Weight <input type="number"  name="min" required /> </br>
+        Choose Max Weight<input type="number"  name="max" required /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+
+</html>

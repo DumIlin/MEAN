@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <link rel = 'stylesheet' href = 'tute.css'/>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    </head>
+
+<body>
+    <h1>Delete User</h1></br>
+    <small>
+        <a type="button" class="btn btn-info" href= "/">Home</a>
+        <a type="button" class="btn btn-info" href= "/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-info" href= "/getparcels">List Parcels</a>
+        <a type="button" class="btn btn-info" href= "/deleteparcel">Delete Parcel</a>
+        <a type="button" class="btn btn-info" href= "/delWoAoF">Delete Parcel by Weight ot Address or Fragile</a>
+        <a type="button" class="btn btn-info" href= "/listS">List parcel by sender</a>
+        <a type="button" class="btn btn-info" href= "/listW">List parcel by weight</a>
+        <a type="button" class="btn btn-info" href= "/updateparcel">Update Parcel</a>
+    </small>
+    <h1></h1>
+    <form action="/delparcel" method="POST">
+        <label for="select">Delete by ID or by Sender?</label>
+        <select id="select" name = 'select'>
+            <option value="">--Make a choice--</option>
+            <option value="i">ID</option>
+            <option value="s">Sender</option>
+          </select><br>
+        Choice <input type="text"  name= 'ch' /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+
+</html>

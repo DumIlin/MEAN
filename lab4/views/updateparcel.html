@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel = 'stylesheet' href = 'tute.css'/>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <form method="post" action="/parceup">
+        <h2>New Parcel</h2>
+        <small>
+            <a type="button" class="btn btn-info" href= "/">Home</a>
+            <a type="button" class="btn btn-info" href= "/addparcel">Add New Parcel</a>
+            <a type="button" class="btn btn-info" href= "/getparcels">List Parcels</a>
+            <a type="button" class="btn btn-info" href= "/deleteparcel">Delete Parcel</a>
+            <a type="button" class="btn btn-info" href= "/delWoAoF">Delete Parcel by Weight ot Address or Fragile</a>
+            <a type="button" class="btn btn-info" href= "/listS">List parcel by sender</a>
+            <a type="button" class="btn btn-info" href= "/listW">List parcel by weight</a>
+            <a type="button" class="btn btn-info" href= "/updateparcel">Update Parcel</a>
+        </small>
+        <h1></h1>
+        <table>
+            <tr>
+              <small>
+                <tb>Id <input type = "text" name = "id" required/></tb><br>
+                <tb>Sender <input type = "text" name = "sender" required minlength="3" pattern="[a-zA-Z'-'\s]*"/></tb><br>
+                <tb>Address <input type = "text" name = "address" required minlength="3" pattern="[a-zA-Z'-'\s]*" /></tb><br>
+                <tb>Weight <input type = "number" name = "weight" min="0" step="1.0" required/></tb><br>
+                <tb>Cost <input type = "number" name = "cost" min="0" step="1.0" required/></tb><br>
+                <tb>
+                    <label for="fragile">Is fragile? </label>
+                    <select required name="fragile" id="fragile">
+                        <option value="">--Please choose an option--</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </tb><br>
+            </tr><h2></h2>
+        </small>
+            <tr><button type = "submit">Submit</button></tr>
+          </table>
+        </form> 
+    </body>
+</html>
