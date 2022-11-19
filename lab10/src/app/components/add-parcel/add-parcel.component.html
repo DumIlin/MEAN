@@ -1,0 +1,22 @@
+
+  <div class="input-group mb-3">
+    SenderID: <input class="form-control form-control-sm"  [(ngModel)]="senderId" />
+  </div>
+    <br>
+  <div class="input-group mb-3">
+    Address: <input class="form-control form-control-sm" placeholder="VIC" [(ngModel)]="address" />
+  </div>
+    <br>
+  <div class="input-group mb-3">
+    Weight: <input class="form-control form-control-sm" [(ngModel)]="weight" />
+  </div>
+    <br>
+    <div class="input-group mb-3">
+    Is Fragile?<select class="form-control form-control-sm" [(ngModel)]="fragile">
+      <option [ngValue]="false">False</option>
+       <option [ngValue]="true">True</option>
+     </select>
+    <hr>
+  </div>
+    <button type="submit" class="btn btn-primary" (click)="onAddParcel()">Add Parcel</button>
+
