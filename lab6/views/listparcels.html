@@ -1,0 +1,64 @@
+<html>
+<head>
+    <link rel = 'stylesheet' href = 'tute.css'/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <small>
+        <a type="button" class="btn btn-info" href= "/">Home</a>
+        <a type="button" class="btn btn-info" href= "/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-info" href= "/getparcels">List Parcels</a>
+        <a type="button" class="btn btn-info" href= "/deleteparcel">Delete Parcel</a>
+        <a type="button" class="btn btn-info" href= "/delWoAoF">Delete Parcel by Weight ot Address or Fragile</a>
+        <a type="button" class="btn btn-info" href= "/listS">List parcel by sender</a>
+        <a type="button" class="btn btn-info" href= "/listW">List parcel by weight</a>
+        <a type="button" class="btn btn-info" href= "/updateparcel">Update Parcel</a>
+    </small>
+    <br>
+    <h1></h1>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Sender</th>
+                    <th>Address</th>
+                    <th>Weight</th>
+                    <th>Cost</th>
+                    <th>Is Fragile?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i =0; i< Office.length;i++){ %>
+                    <tr>
+                        <td>
+                            <%= Office[i]._id %>
+                        </td>
+                        <td>
+                            <%= Office[i].sender %>
+                        </td>
+                        <td>
+                            <%= Office[i].address %>
+                        </td>
+                        <td>
+                            <%= Office[i].weight %>
+                        </td>
+                        <td>
+                            <%= Office[i].cost %>
+                        </td>
+                        <td>
+                            <%= Office[i].fragile %>
+                        </td>
+                    </tr>
+                    <% }%>
+                </tbody>
+     </table>
+    
+</body>
+
+</html>
