@@ -1,0 +1,40 @@
+Sender: <input class="form-control form-control-sm" placeholder="Emma Smith" [(ngModel)]="sender" />
+<br>
+Address: <input class="form-control form-control-sm" placeholder="VIC" [(ngModel)]="address" />
+<br>
+Weight: <input class="form-control form-control-sm" [(ngModel)]="weight" />
+<br>
+Cost: <input class="form-control form-control-sm" [(ngModel)]="cost" />
+<br>
+Is Fragile?<select class="form-control form-control-sm" [(ngModel)]="fragile">
+  <option [ngValue]="false">false</option>
+   <option [ngValue]="true">true</option>
+ </select>
+<br>
+<button class="btn btn-primary" (click)="newItem()">Add Parcel {{db.length}}</button> &nbsp;&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="deleteParcel_Zero()" *ngIf= "counter > 0" >Delete Parcels with Weight Zero {{counter}}</button>
+<h1></h1>
+&nbsp;&nbsp;&nbsp;
+
+<table class="table table-bordered">
+  <tr>
+    <th> # </th>
+    <th> ID</th>
+    <th> Parcel </th>
+    <th> Address </th>
+    <th> Weight </th>
+    <th> Cost </th>
+    <th> Fragile </th>
+    <th> Delete</th>
+  </tr>
+  <tr *ngFor="let item of db; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{item._id}}</td>
+    <td>{{item.sender}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.weight}}</td>
+    <td>{{item.cost}}</td>
+    <td>{{item.fragile}}</td>
+    <td><button class="btn btn-outline-danger" (click)="deleteRow(i)">X</button></td>
+  </tr>
+</table>
